@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./estilos/dgp.css" rel="stylesheet" type="text/css"/>
+    <link href="./estilos/banner.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    <title>Document</title>
+    <script>
+        
+        function text(x){  
+            if(x==1) {
+                document.getElementById("Descbienes").style.display='block';
+                document.getElementById("mobil").style.display="block";
+                document.getElementById("compu").style.display="none";
+            }else{
+                document.getElementById("Descbienes").style.display='block';
+                document.getElementById("compu").style.display="block";
+                document.getElementById("mobil").style.display="none";
+            }
+            return;
+            
+        }
+    </script>
+
+</head>
+<body>
+    <header class="sty_header">
+        <div class="contenedor_banner">
+            <div  class="sty_logo" >
+                <section align="left" id="logo">
+                    <img src="img/Unach.png" width="110" height="90" alt="unach">
+                    <img src="img/DGP.png" width="110" height="90" alt="unach" align="right">
+                </section>
+                
+            </div>
+
+        </div>
+    </header>        
+    <div class="contenedor_menu">
+        <span class="navmenu" id="btnMenu"><i class="fa fa-bars"></i> Menu </span>        
+        <nav class="mainnav">
+            <ul class="menu" id="menu">
+                <li class="menuitem"><a class="menu__link" href="index.html">INICIO</a></li>
+                <li class="menuitem"><a class="menu__link" href="#">REGISTRO</a></li>
+                <li class="menuitem"><a class="menu__link" href="inventario.html">INVENTARIO</a></li>
+                <li class="menuitem"><a class="menu__link" href="#">OPCION</a></li>
+            </ul>
+            
+        </nav>
+        <script> const btnMenu = document.querySelector("#btnMenu");
+            const menu = document.querySelector("#menu");
+            
+            btnMenu.addEventListener("click", function(){
+                menu.classList.toggle("mostrar");
+            });</script>
+
+    </div>
+   <div>
+    <main>
+        <form class="formulario">
+            <div class="contenedor" >
+                <div class="datos_personales">
+                    <div class="caja-select">
+                        <div class="select-box">
+                                <label for="" class="sty_labelselec">Número plaza</label>
+                                <select name="numeroPlaza">
+                                    <option>Opcion1</option>
+                                    <option>Opcion2</option>
+                                    <option>Opcion3</option>
+                                </select>   
+                        </div>
+                    </div>
+                   
+                    <div class="caja-select">
+                        <div class="select-box">
+                            <label for="" class="sty_labelselec">Nombre empleado</label>
+                            <select >
+                                <option>Opcion1</option>
+                                <option>Opcion2</option>
+                                <option>Opcion3</option>
+                            </select>
+                        </div>    
+                    </div>
+                    <label for="" class="sty_label">Nombre de dirección</label>
+                    <input for="" class="sty_input" type="text" name="numeroInventario" placeholder="Ingrese el nombre de la dirección" id="">
+                    
+                    <label for="" class="sty_label">Nombre de departamento</label>
+                    <input for="" class="sty_input" type="text" name="numeroInventario" placeholder="Ingrese el nombre del departamento" id="">
+
+                    <label for="" class="sty_label">Número de cubiculo/Ubicación</label>
+                    <input for="" class="sty_input" type="text" name="cubiculo" placeholder="Ingrese su cubiculo" id="">
+
+                </div>
+
+                    <div>
+                        <label for="" class="sty_label"><br/> <br/>Número de factura</label>
+                        <input for="" class="sty_input" type="text" name="numeroFactura" placeholder="Ingrese su número de factura" id="">
+    
+                        <label for="" class="sty_label">Número de poliza</label>
+                        <input for="" class="sty_input" type="text" name="numeroPoliza" placeholder="Ingrese su número de poliza" id="">
+             
+                        <label for="" class="sty_label"> <br/><br/>Fecha compra</label>
+                        <input for="" class="sty_input" type="date" name="Fechacompra" id="">
+
+                    
+                        <label for="" class="sty_label">Importe</label>
+                        <input for="" class="sty_input" type="text" name="Importe" placeholder="Ingrese el importe" id="">
+                    
+                    
+                        <label for="" class="sty_label">Número de inventario</label>
+                        <input for="" class="sty_input" type="text" name="numeroInventario" placeholder="Ingrese el número de inventario" id="">
+
+                    </div>
+                        
+                    
+            </div>
+            
+            <div class="contenedor" class="producto">
+                    <label for="" class="sty_label">Proveedor</label>
+                    <input for="" class="sty_input" type="text" name="proveedor" placeholder="Ingrese el proveedor"  id="">
+                <div class="descripcionBien" >
+                    <label for="" class="sty_label">Tipo de descripción del bien</label>
+                    <div >
+                        <div class="sty_radio" >
+                            <input class="st_radiobtn" type="radio" name="resguardos" id="mobiliario" onclick="text(1)">
+                            <label class="lable_radio" for="mobiliario">Mobiliario</label>
+
+                            <input class="st_radiobtn" type="radio" name="resguardos" id="Computo" onclick="text(2)">
+                            <label class="lable_radio" for="Computo">Computo</label>
+                        </div>
+
+                        <div class="caracPrincipal">
+                            <label for="" class="sty_label"><br/>Características</label>
+                            <input for="" class="sty_input" type="text" name="carac" placeholder="Ingrese sus caracteristica" id="">
+
+                            <label for="" class="sty_label">Marca</label>
+                            <input for="" class="sty_input" type="text" name="marca" placeholder="Ingrese la marca" id="">
+
+                            <label for="" class="sty_label">Color</label>
+                            <input for="" class="sty_input" type="text" name="color" placeholder="Ingrese el color" id="">
+                        </div>
+                        <div id="Descbienes" style="display: none;" class="sty_descBienes" >
+                            
+                                <div id="mobil">
+                                    <label for="" class="sty_label">Modelo</label>
+                                    <input for="" class="sty_input" type="text" name="modelo" placeholder="Ingrese el modelo" id="mobil">
+
+                                    <label for="" class="sty_label">Número de serie</label>
+                                    <input for="" class="sty_input" type="text" name="numSerie" placeholder="Ingrese su número de serie" id="mobil">
+                                </div>
+
+                                <div id="compu">
+                                    <label for="" class="sty_label">Procesador</label>
+                                    <input for="" class="sty_input" type="text" name="procesador" placeholder="Ingrese su procesador" id="compu">
+
+                                    <label for="" class="sty_label">Disco duro</label>
+                                    <input for="" class="sty_input" type="text" name="discDuro" placeholder="Ingrese el tipo de disco duro" id="compu">
+
+                                    <label for="" class="sty_label">Accesorios</label>
+                                    <input for="" class="sty_input" type="text" name="Acces" placeholder="Ingrese los accesorios" id="compu">
+                                    
+                                    <label for="" class="sty_label">Modelo</label>
+                                    <input for="" class="sty_input" type="text" name="modelo" placeholder="Ingrese el modelo" id="compu">
+                                
+                                    <label for="" class="sty_label">Número de serie</label>
+                                    <input for="" class="sty_input" type="text" name="numSerie" placeholder="Ingrese el número de serie" id="compu">
+                                
+                                    <label for="" class="sty_label">Memoria RAM</label>
+                                    <input for="" class="sty_input" type="text" name="memoriaRam" placeholder="Ingrese la memoria RAM" id="compu">
+                                
+                                </div>
+                        </div>
+                            
+                    </div>
+                </div>
+                        
+                        
+                    <div >
+                        <input class="btn_enviar"type ="submit" align="right" name="Enviar">
+                    </div>
+        </div>
+               
+           
+
+        </form>
+
+
+    </main>
+
+   </div>     
+    
+</body>
+</html>
